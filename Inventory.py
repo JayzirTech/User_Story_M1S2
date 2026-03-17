@@ -1,5 +1,14 @@
+import os
+os.system("clear")
+
 # Variables
-sales=[]
+ventas={
+    "name": [],
+    "price": [],
+    "quantiy": []  
+}
+
+#sales=[]
 saleStatus=True
 addProducts=True
 totalSales=0
@@ -40,7 +49,9 @@ while saleStatus:   #Loop to add products to the sale
             print("Error: Please enter a valid numeric value")
             print()
 
-    sale=[name, price, quantity]    #Create a list with the product name, price and quantity
+    '''sale=[name, price, quantity]    #Create a list with the product name, price and quantity
+    ventas["name"].append(name)
+    print(ventas["name"])'''
 
     #Check if the user is entering a product that is already registered
     foundProduct=False
