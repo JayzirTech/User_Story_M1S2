@@ -30,3 +30,5 @@ def addProduct ():
             print()
             print("Error: Please enter a valid numeric value")
             print()
+
+    return name, price, quantity
