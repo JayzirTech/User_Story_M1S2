@@ -23,8 +23,19 @@ def total():
 
 def quantityOfProducts():
     Inventory=inventory()
-    
-    Quantity=len(Inventory)
+    Quantity=0
+
+    for products in Inventory:
+        if products ["quantity"] >= 0:
+            Quantity += 1
+            '''subTotalSale = products["price"] * products["quantity"]
+            number+=1
+            if products["quantity"] == 0:
+                print(f"Product {number}: {products["name"].capitalize()} | No hay exixtensias")   #    
+            else:
+                print(f"Product {number}: {products["name"].capitalize()} | Value: ${products["price"]} | Quantity: {products["quantity"]}")
+            
+            totalSales += subTotalSale'''
     
     print("-----------------------------------------")
     print(f"Quantity of products: {Quantity}")
