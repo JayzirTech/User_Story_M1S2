@@ -1,7 +1,11 @@
 validation = True
 Inventory = []
 
+#Function to register a new product
 def addProduct ():
+
+    print("Add Product")
+    print("--------------------------------")
     
     while validation:
         name=input("Please, Enter the product name: ").lower().strip()  #Enter the product name and converts everything to lowercase
@@ -33,29 +37,26 @@ def addProduct ():
             print()
 
 
-    #Check if the user is entering a product that is already registered
+    #Check if the user is entering a product that is already registered and update the quantity
     foundProduct=False
-    for sale in Inventory:
-        if sale["name"] == name :
-            '''i=sales.index(sale)'''   #Opcion para borrar un producto
-            sale["quantity"] += quantity
-            '''if sale["quantity"] == 0:
-                del sales [i]'''        #Opcion para borrar un producto
+    for product in Inventory:
+        if product["name"] == name :
+            product["quantity"] += quantity
             foundProduct=True
             print(f"Updated quantity")
             print()
 
-    if not foundProduct:    #If the product does not exist, it is added to the list
-        sale={
+    if not foundProduct:    #If the product does not exist, it is added to the list as a dictionary
+        product={
         "name" : name,
         "price" : price,
         "quantity" : quantity
         }
 
-        Inventory.append(sale)
+        Inventory.append(product)   #Add the new product to the list
 
         print("product added successfully!")
-        print()
 
+#Function to return the product list
 def inventory():
     return Inventory
