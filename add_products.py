@@ -55,7 +55,7 @@ def addProduct ():
 
         Inventory.append(product)   #Add the new product to the list
 
-        print("product added successfully!")
+        print("Product added successfully!")
 
 #Function to return the product list
 def inventory():
