@@ -1,5 +1,16 @@
+import csv
 import os
+
 os.system("clear")
+
+notes = []
+#
+with open ('inventario.csv', newline='') as f:
+    data = csv.reader(f)
+    notes=list(data)
+
+print(notes)
+
 
 #
 from add_products import addProduct

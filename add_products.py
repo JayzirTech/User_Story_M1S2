@@ -15,7 +15,7 @@ def addProduct ():
 
     while validation:   #Loop to validate the price and quantity inputs
         try:
-            price=float(input("Please, Enter the product value: ")) #Enter the product price and converts in float
+            price=float(input(f"Please, Enter the product value ({name.capitalize()}): ")) #Enter the product price and converts in float
             if price<=0: #Verify that the value is greater than 0
                 print()
                 print("The price must be greater then zero")
@@ -29,7 +29,7 @@ def addProduct ():
 
     while validation:   #Loop to validate the price and quantity inputs
         try:
-            quantity=float(input("Please, Enter the quantity of the product: "))    #Enter the product quantity and converts in float
+            quantity=int(input(f"Please, Enter the quantity of the product ({name.capitalize()}): "))    #Enter the product quantity and converts in float
             break 
         except ValueError:  #Verifies that the user has entered a numeric value
             print()
